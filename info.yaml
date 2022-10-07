@@ -6,33 +6,33 @@
 #
 # This will be automatically collected and used to make a datasheet for the chip.
 project: 
-  author:       ""      # Your name
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  ""      # Describe any external hardware needed
+  author:       "Seth KErr"      # Your name
+  title:        "2x 1 to 4 Frequency Divider"      # Project title
+  description:  "A simple flip-flop based frequency divider"      # Short description of what your project does
+  how_it_works: "The Frequency Divider works by taking 4 frequencies and selecting 2 with select pins as inputs and through a flip-flop chain, divides the input into 4 frequencies. The frequency breaks down to f/2, f/4, f/8, and f/16."      # Longer description of how the project works
+  how_to_test:  "The most simple test of the frequency divider is to use the source clock on pin one, and attach an oscilloscope to the outputs and measure their frequency."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "external clock sources are necessary to test all inputs. A simple adjustable astable 555 is recommended"      # Describe any external hardware needed
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
-  clock_hz:     0       # Clock frequency in Hz (if required)
+  clock_hz:     16Hz       # Clock frequency in Hz (if required)
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  wokwi_id:     0       # the wokwi ID
+  wokwi_id:     341160201697624660       # the wokwi ID
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-    - clock
-    - reset
-    - none
-    - none
-    - none
-    - none
+    - clock (default f(1) input option)
+    - f(1), 2 - second f(1) input option
+    - f(2), 1 - default f(2) input option
+    - f(2), 2 - second f(2) input option
+    - f(1) select - selects which f(1) input frequency to use
+    - f(2) select - selects which f(2) input frequency to use
     - none
     - none
   outputs:
-    - segment a         # a description of what the outputs do
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - none
+    - f(1)/2 - Frequency 1 divided in half         # a description of what the outputs do
+    - f(1)/4 - Frequency 1 divided in quarters
+    - f(1)/8 - Frequency 1 divided in eighths
+    - f(1)/16 - Frequency 1 divided into sixteenths
+    - f(2)/2 - Frequency 2 divided in half         # a description of what the outputs do
+    - f(2)/4 - Frequency 2 divided in quarters
+    - f(2)/8 - Frequency 2 divided in eighths
+    - f(2)/16 - Frequency 2 divided into sixteenths
 
