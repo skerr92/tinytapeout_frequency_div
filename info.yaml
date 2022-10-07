@@ -6,7 +6,7 @@
 #
 # This will be automatically collected and used to make a datasheet for the chip.
 project: 
-  author:       "Seth KErr"      # Your name
+  author:       "Seth Kerr"      # Your name
   title:        "2x 1 to 4 Frequency Divider"      # Project title
   description:  "A simple flip-flop based frequency divider"      # Short description of what your project does
   how_it_works: "The Frequency Divider works by taking 4 frequencies and selecting 2 with select pins as inputs and through a flip-flop chain, divides the input into 4 frequencies. The frequency breaks down to f/2, f/4, f/8, and f/16."      # Longer description of how the project works
